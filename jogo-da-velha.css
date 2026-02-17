@@ -1,0 +1,46 @@
+/* Estilo geral da página */
+body{
+    background:#111; /* fundo escuro */
+    color:white;
+    text-align:center;
+    font-family:Arial;
+}
+
+/* Tabuleiro usando GRID (layout moderno) */
+.board{
+    display:grid; /* ativa grid layout */
+    grid-template-columns: repeat(3,100px); /* 3 colunas */
+    gap:10px; /* espaço entre casas */
+    justify-content:center;
+    margin:20px;
+}
+
+/* Cada casa do jogo */
+.cell{
+    width:100px;
+    height:100px;
+    background:#222;
+    font-size:40px; /* tamanho X e O */
+
+    /* centraliza conteúdo */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+    border-radius:10px;
+    transition:0.2s; /* animação suave */
+}
+
+/* efeito hover */
+.cell:hover{
+    background:#333;
+}
+
+/* botão */
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}

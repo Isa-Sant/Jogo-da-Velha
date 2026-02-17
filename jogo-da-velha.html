@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<!-- Define codificação de caracteres -->
+<meta charset="UTF-8">
+
+<!-- Responsivo para celular -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jogo da Velha</title>
+
+<!-- Conecta o arquivo CSS -->
+<link rel="stylesheet" href="jogo-da-velha.css">
+
+</head>
+
+<body>
+
+<!-- Título principal -->
+<h1>🔥 Jogo da Velha</h1>
+
+<!-- Texto que mostra qual jogador está jogando -->
+<h2 id="status">Vez do jogador X</h2>
+
+<!-- Tabuleiro do jogo -->
+<!-- Cada div representa uma casa -->
+<!-- data-index guarda a posição no array do JS -->
+<div class="board">
+
+<div class="cell" data-index="0"></div>
+<div class="cell" data-index="1"></div>
+<div class="cell" data-index="2"></div>
+
+<div class="cell" data-index="3"></div>
+<div class="cell" data-index="4"></div>
+<div class="cell" data-index="5"></div>
+
+<div class="cell" data-index="6"></div>
+<div class="cell" data-index="7"></div>
+<div class="cell" data-index="8"></div>
+
+</div>
+
+<!-- Botão para reiniciar jogo -->
+<button onclick="restartGame()">Reiniciar</button>
+
+<!-- Conecta o JavaScript -->
+<script src="jogo-da-velha.js"></script>
+
+</body>
+</html>
