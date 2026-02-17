@@ -1,26 +1,47 @@
 /* Estilo geral da página */
 body{
-    background:#111; /* fundo escuro */
+
+    /* fundo escuro estilo game */
+    background:#0a0a0a;
+
     color:white;
+
+    /* centraliza texto */
     text-align:center;
+
     font-family:Arial;
 }
 
-/* Tabuleiro usando GRID (layout moderno) */
+
+/* TABULEIRO DO JOGO */
 .board{
-    display:grid; /* ativa grid layout */
-    grid-template-columns: repeat(3,100px); /* 3 colunas */
-    gap:10px; /* espaço entre casas */
+
+    /* ativa GRID layout (profissional) */
+    display:grid;
+
+    /* cria 3 colunas iguais */
+    grid-template-columns: repeat(3,100px);
+
+    /* espaço entre células */
+    gap:12px;
+
+    /* centraliza horizontalmente */
     justify-content:center;
+
     margin:20px;
 }
 
-/* Cada casa do jogo */
+
+/* CASAS DO JOGO */
 .cell{
+
     width:100px;
     height:100px;
-    background:#222;
-    font-size:40px; /* tamanho X e O */
+
+    background:#1a1a1a;
+
+    /* tamanho das letras X e O */
+    font-size:40px;
 
     /* centraliza conteúdo */
     display:flex;
@@ -28,19 +49,42 @@ body{
     justify-content:center;
 
     cursor:pointer;
-    border-radius:10px;
-    transition:0.2s; /* animação suave */
+
+    border-radius:12px;
+
+    /* animação suave */
+    transition:0.2s;
 }
 
-/* efeito hover */
+
+/* efeito quando passa mouse */
 .cell:hover{
+
     background:#333;
+
+    /* leve zoom */
+    transform:scale(1.05);
 }
 
-/* botão */
-button{
-    padding:10px 20px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
+
+/* classe adicionada quando alguém ganha */
+.win{
+
+    background:lime;
+    color:black;
 }
+
+
+/* botão reiniciar */
+button{
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+

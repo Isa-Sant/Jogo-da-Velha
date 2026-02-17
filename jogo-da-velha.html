@@ -2,32 +2,38 @@
 <html lang="pt-br">
 <head>
 
-<!-- Define codificação de caracteres -->
+<!-- Define caracteres especiais (acentos etc) -->
 <meta charset="UTF-8">
 
-<!-- Responsivo para celular -->
+<!-- Faz o site adaptar para celular -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jogo da Velha</title>
+<!-- Nome que aparece na aba do navegador -->
+<title>Jogo da Velha PRO</title>
 
-<!-- Conecta o arquivo CSS -->
+<!-- Conecta arquivo CSS -->
 <link rel="stylesheet" href="jogo-da-velha.css">
 
 </head>
 
 <body>
 
-<!-- Título principal -->
-<h1>🔥 Jogo da Velha</h1>
+<!-- Título principal do jogo -->
+<h1>🔥 Jogo da Velha PRO</h1>
 
-<!-- Texto que mostra qual jogador está jogando -->
-<h2 id="status">Vez do jogador X</h2>
+<!-- Texto dinâmico controlado pelo JavaScript -->
+<!-- Aqui aparece: vez do jogador, vitória ou empate -->
+<h2 id="status">Sua vez (X)</h2>
 
-<!-- Tabuleiro do jogo -->
-<!-- Cada div representa uma casa -->
-<!-- data-index guarda a posição no array do JS -->
+<!-- Placar salvo com localStorage -->
+<p>Vitórias: <span id="wins">0</span></p>
+
+<!-- TABULEIRO -->
+<!-- container grid que segura as casas -->
 <div class="board">
 
+<!-- Cada casa é uma célula -->
+<!-- data-index indica posição dentro do array JS -->
 <div class="cell" data-index="0"></div>
 <div class="cell" data-index="1"></div>
 <div class="cell" data-index="2"></div>
@@ -42,11 +48,13 @@
 
 </div>
 
-<!-- Botão para reiniciar jogo -->
+<!-- Botão chama função restartGame() do JS -->
 <button onclick="restartGame()">Reiniciar</button>
 
-<!-- Conecta o JavaScript -->
+<!-- Conecta JavaScript -->
 <script src="jogo-da-velha.js"></script>
 
 </body>
 </html>
+
+
